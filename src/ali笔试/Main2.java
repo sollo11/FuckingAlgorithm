@@ -42,7 +42,7 @@ public class Main2 {
             return dp[x][y];
         int max_sum=0; //记录最大和值
         //比当前值大才可以走
-        for (int step=1;step<=max_step;step++){
+        for (int step=1; step<=max_step;step++){
             //在四个方向的每个方向上的[1,max_step]步范围内求到value的最大值，更新max_sum
             //每个方向会来一次递归其四个方向，最终将这个方向的[1,max_step]的每一步四个方向的四个方向的...的最大和值
             //也就是确定了往某一方向的最大和值，其他方向同理
@@ -51,6 +51,7 @@ public class Main2 {
             if(x-step>0 &&value[x-step][y]>value[x][y]) max_sum=Math.max(max_sum,calcMaxWay(x-step,y,max_step,dp,value));
             if(x+step<value[1].length && value[x+step][y] > value[x][y])max_sum=Math.max(max_sum,calcMaxWay(x+step,y,max_step,dp,value));
         }
+
         dp[x][y]=value[x][y]+max_sum;
         return dp[x][y];
     }

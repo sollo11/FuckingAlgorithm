@@ -1,9 +1,11 @@
 package ali笔试;
 
+import 鸡场.Main;
+
 import java.util.Scanner;
 
 /**
- * @description：
+ * @description:
  * 你有一次特训时间为n秒，木头人个数为m，血量为a，你的攻击范围为b，每次最多攻击b个木头人，每次攻击持续1s
  * 问：经过n秒的特训木头人血量为0的最多个数是多少
  * 样例:
@@ -19,19 +21,20 @@ import java.util.Scanner;
  * @限制：
  * @author：Jack
  * @createTime：2020/4/8 9:26
- * @level：
+ * @Level：
  */
 public class Main1 {
     public static void main(String[] args) {
         int t;
+        
         Scanner scanner=new Scanner(System.in);
         t=scanner.nextInt();
-
         for(int i=1;i<=t;i++){
             int time=scanner.nextInt();
             int num=scanner.nextInt();
             int first_blood=scanner.nextInt();
             int max_attack=scanner.nextInt();
+
             if(time<first_blood){
                 System.out.println(0);
                 continue;
