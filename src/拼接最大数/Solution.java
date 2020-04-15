@@ -1,13 +1,13 @@
 package 拼接最大数;
 
 /**
- * @description：
- * @url：https://leetcode-cn.com/problems/create-maximum-number/
+ * @Description:
+ * @Url: https://leetcode-cn.com/problems/create-maximum-number/
  * 思路https://blog.csdn.net/qq_26410101/article/details/81746569
- * @限制：
- * @author：Jack
- * @createTime：2020/4/13 9:53
- * @level：困难
+ * @限制:
+ * @Author: Jack
+ * @createTime: 2020/4/13 9:53
+ * @level: 困难
  */
 public class Solution {
 

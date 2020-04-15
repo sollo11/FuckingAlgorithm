@@ -13,14 +13,14 @@ import java.util.Arrays;
  * 大顶堆：arr[i] >= arr[2i+1] && arr[i] >= arr[2i+2]
  * 小顶堆：arr[i] <= arr[2i+1] && arr[i] <= arr[2i+2]
  * https://www.cnblogs.com/chengxiao/p/6129630.html
- * @url：https://mp.weixin.qq.com/s/FqpnIolRYPAM59ol1e-bMw
- * @限制：堆排序中初始化堆的过程比较次数较多, 因此它不太适用于小序列
+ * @url： https://mp.weixin.qq.com/s/FqpnIolRYPAM59ol1e-bMw
+ * @限制： 堆排序中初始化堆的过程比较次数较多, 因此它不太适用于小序列
  * 同时由于多次任意下标相互交换位置, 相同元素之间原本相对的顺序被破坏了, 因此, 它是不稳定的排序。
  * ①. 建立堆的过程, 从length/2 一直处理到0, 时间复杂度为O(n);
  * ②. 调整堆的过程是沿着堆的父子节点进行调整, 执行次数为堆的深度, 时间复杂度为O(lgn);
  * ③. 堆排序的过程由n次第②步完成, 时间复杂度为O(nlgn).
- * @author：Jack
- * @createTime：2020/3/24 22:05
+ * @author： Jack
+ * @createTime： 2020/3/24 22:05
  * @level：
  */
 public class Main {
