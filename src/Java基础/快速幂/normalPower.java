@@ -18,9 +18,7 @@ package Java基础.快速幂;
  * @level：
  */
 public class normalPower {
-    public static void main(String[] args) {
-
-    }
+    public static void main(String[] args) {}
 
     //虽然这个求幂的方法很有用，并且提交给OJ也直接Accept了，但是我们来考虑一下这个算法的时间复杂度，
     // 假设我们求2的100次方，那么将会执行100次循环。如果我们分析一下这个算法，就会发现这个算法的时间复杂度为O(N),

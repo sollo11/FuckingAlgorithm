@@ -28,8 +28,25 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int []arr = {6,1,2,7,9};
-        QuickSort(arr,0,arr.length-1);
+        QuickSort1(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
+    }
+    static void QuickSort1(int arr[], int start, int end){
+        int l=start,r=end;
+        if(l<r){
+            int pivot=arr[l];
+            while (l!=r){
+                while (l<r&&arr[r]>=pivot)
+                    r--;
+                arr[l]=arr[r];
+                while (l<r&&arr[l]<=pivot)
+                    l++;
+                arr[r]=arr[l];
+            }
+            arr[l]=pivot;
+            QuickSort(arr,start,l-1);
+            QuickSort(arr,l+1,end);
+        }
     }
 
     static void QuickSort(int arr[], int start, int end){

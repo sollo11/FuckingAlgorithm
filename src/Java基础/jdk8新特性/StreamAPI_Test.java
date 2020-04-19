@@ -29,7 +29,7 @@ public class StreamAPI_Test {
         //函数式接口
         //lambda表达式
         //list.stream()转化为流
-        long count = list.stream().filter( (s) -> s.length() > 3).count(); //参数只有一个，可以省去()，filter内部
+        long count = list.stream().filter((s) -> s.length() > 3).count(); //参数只有一个，可以省去()，filter内部
         //是否匹配，匹配则通过过滤，count+1
         System.out.println(count);
     }

@@ -36,8 +36,7 @@ public class Singleton1 {
      * 不然就报错了
      */
     private volatile static Singleton1 singleton1;
-    private Singleton1(){
-    }
+    private Singleton1(){}
     public static Singleton1 getInstance(){
         //先判断对象是否已经实例过，没有实例化过才进入加锁代码
         /**

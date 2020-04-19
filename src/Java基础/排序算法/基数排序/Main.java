@@ -46,8 +46,6 @@ public class Main {
         return time;
     }
 
-
-
     private static void Basesort(int[] array, int len) {
         //求最大位数
         int time = getTime(array, len);

@@ -21,7 +21,6 @@ public class FooBar {
 
     private Semaphore semaphore = new Semaphore(1); //信号量控制的是线程并发的数量,参数permits就是允许同时运行的线程数目;
 
-
     public FooBar(int n) {
         this.n = n;
     }

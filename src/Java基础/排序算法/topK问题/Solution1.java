@@ -21,24 +21,25 @@ public class Solution1 {
     }
     //时间复杂度：O(nlg(n))
     private static void QuickSort(int[] nums, int left,int right) {
-        int l=left;
-        int r=right;
-        if(l<r) {
-            int pivot = nums[left];
-            while (l != r) {
-                while (l < r && nums[r] >= pivot) {
-                    r--;
-                }
-                nums[l] = nums[r];
-                while (l < r && nums[l] <= pivot) {
-                    l++;
-                }
-                nums[r] = nums[l];
-            }
-            nums[l] = pivot;
-            QuickSort(nums, left, l - 1);
-            QuickSort(nums, l+1, right);
-        }
+
+//        int l=left;
+//        int r=right;
+//        if(l<r) {
+//            int pivot = nums[left];
+//            while (l != r) {
+//                while (l < r && nums[r] >= pivot) {
+//                    r--;
+//                }
+//                nums[l] = nums[r];
+//                while (l < r && nums[l] <= pivot) {
+//                    l++;
+//                }
+//                nums[r] = nums[l];
+//            }
+//            nums[l] = pivot;
+//            QuickSort(nums, left, l - 1);
+//            QuickSort(nums, l+1, right);
+//        }
     }
 
 }
