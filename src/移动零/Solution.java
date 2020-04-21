@@ -29,6 +29,9 @@ public class Solution {
     //此时遇到0，那么slow=1,fast=3
     //直到遇到1，此时slow=1,fast=4,交换得到[3,1,0,0,0]
     //所以慢指针之前的所有元素都是非零的，当前指针和慢速指针之间的所有元素都是零
+    //思想：slow指针永远指向的是下一个待填充非零数的位置，而fast是去找非零来填充到slow的位置
+    //当fast遇到非零元素的时候，将其填补到slow的位置，也就是说要么fast跟slow重合，要么slow指向的位置是0,然后再隔了
+    //若干个0才是fast指向的非零元素，所以这种算法不会改变非零元素的相对顺序
     public void moveZeroes1(int[] nums) {
         int slow=0,fast=0;
         for ( ;fast<nums.length;fast++){
