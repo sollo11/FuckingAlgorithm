@@ -5,13 +5,13 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @description：使用一个窗口[head,tail]维护一个没有重复的子串，使用Set维护该窗口的所有字符
+ * @description： 使用一个窗口[head,tail]维护一个没有重复的子串，使用Set维护该窗口的所有字符
  * 如果tail此时访问到的元素在窗口中还没有出现，那么就继续扩大窗口的范围,head不变，tail++
  * 如果tail此时访问到的元素在窗口中已经出现过，那么就要改变head，abca
- * @url：https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/
+ * @url： https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/
  * @限制：
- * @author：Jack
- * @createTime：2020/3/4 20:09
+ * @author： Jack
+ * @createTime： 2020/3/4 20:09
  * @level：
  */
 public class Solution {
