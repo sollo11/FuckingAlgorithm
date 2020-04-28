@@ -2,7 +2,8 @@ package 青蛙跳台阶问题;
 
 /**
  * @description:斐波那契问题变种
- * @url:https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/
+ * @url:
+ * https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/
  * @author:Jack
  * @createTime:2020/2/21 19:18
  * @level:

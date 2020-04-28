@@ -107,6 +107,32 @@ public class Solution {
         }
         return dp[n - 1][max_k][0];
     }
+
+    /**
+     * https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by--29/
+     * 动规做法：
+     * 用 dp[i][k] 表示prices[0]...prices[i]这几天最多交易k次的最高收益
+     * dp[i][k] = Max(dp[i-1][k],prices[i] - prices[j] + dp[j][k-1])，j=[0,i]
+     * 而 prices[i] - prices[j] + dp[j][k-1] 也可以看做， prices[i] - (prices[j] - dp[j][k-1]) ，
+     * 为了求这个表达式的最大值，我们可以找prices[j] - dp[j][k-1]的最小值
+     * @param prices
+     * @return
+     */
+    public int maxProfit2(int[] prices) {
+        int len=prices.length;
+        if (len==0)
+            return 0;
+        int k=2;
+        int[][] dp=new int[len][k+1];
+        for (int time=1;time<=k;time++){
+            int min=prices[0];
+            for (int j=1;j<len;j++){
+                min=Math.min(prices[j]-dp[j][time-1],min);
+                dp[j][time]=Math.max(dp[j-1][time],prices[j]-min);
+            }
+        }
+        return dp[len-1][k];
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
