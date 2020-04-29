@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * @Author: Jack
  * @Date: 2020/4/28 20:56
- * @Description: 过了70%
+ * @Description:
  * @Url:
  * @限制:
  * @Level:
@@ -28,35 +28,20 @@ public class Main1 {
             System.out.println(0);
             return;
         }
-        int p_s1 = 0, p_s2 = 0;
-        boolean first = false;
+        int p_s1 = s1.length()-1, p_s2 = s2.length()-1;
         int res = 0;
-        TreeMap<Integer, Boolean> map = new TreeMap<>();
-        LinkedList<Integer> list = new LinkedList<>();
-        for (; p_s1 < s1.length(); p_s1++) {
-            char ch_s1 = s1.charAt(p_s1);
-            char ch_s2 = s2.charAt(p_s2);
-            if (ch_s1 == ch_s2) {
-                if (!first) {
-                    map.put(p_s1 + 1, false);
-                    list.addLast(p_s1 + 1);
-                    first = true;
-                }
-                p_s2++;
-                if (p_s2 == s2.length()) {
-                    Integer last = list.getLast();
-                    map.put(last, true);
-                    first = false;
-                    p_s2 = 0;
+        while (p_s1>=0&&p_s2>=0){
+            if (s1.charAt(p_s1)==s2.charAt(p_s2)){
+                p_s1--;
+                p_s2--;
+                if (p_s2==-1){
+                    res=p_s1+2;break;
                 }
             }
-        }
-        int r = 0;
-        for (Integer i : map.keySet()) {
-            if (map.get(i)) {
-                r = Math.max(r, i);
+            else {
+                p_s1--;
             }
         }
-        System.out.println(r);
+        System.out.println(res);
     }
 }
