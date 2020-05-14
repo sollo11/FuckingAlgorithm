@@ -24,7 +24,7 @@ public class Solution4 {
         }
 
         int dp[]=new int[weight_Of_Bag+1];
-
+        
         for (int i=0;i<=weight_Of_Bag;i++){
             dp[i]=0;  //组成容量i的最大价值
         }
