@@ -1,4 +1,4 @@
-package Java基础.二进制在算法中的应用;
+package 基本问题.二进制在算法中的应用;
 
 
 import org.junit.Test;

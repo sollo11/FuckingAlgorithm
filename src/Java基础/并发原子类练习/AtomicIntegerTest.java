@@ -1,4 +1,4 @@
-package Java基础.并发原子类练习;
+package 基本问题.并发原子类练习;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

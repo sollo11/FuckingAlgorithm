@@ -1,4 +1,4 @@
-package Java基础.代理模式.jdk.dao;
+package 基本问题.代理模式.jdk.dao;
 
 /**
  * @description：

@@ -1,6 +1,4 @@
-package Java基础.判断链表是否有环;
-
-import java.util.List;
+package 基本问题.判断链表是否有环;
 
 /**
  * @description：

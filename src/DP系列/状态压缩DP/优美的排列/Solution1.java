@@ -41,7 +41,7 @@ public class Solution1 {
                 //找到为0的位
                 if ((n & (1 << (step-1))) == 0){ //如果数n的二进制表示的第step位为0（没有被选择）
                     //该位用来表示的数字为step,下一个待确定数字的位置为one(例如010101,one=3，那么数组下一个待确定数字的下标为3)
-                    if (step % (one+1) == 0 || (one+1) % step == 0)
+                    if (step % (one + 1) == 0 || (one+1) % step == 0)
                         dp[(1 << (step - 1)) | n] += dp[n];
                     /**
                      * (1 << step) | n

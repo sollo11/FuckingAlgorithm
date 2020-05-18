@@ -1,4 +1,4 @@
-package Java基础.排序算法.topK问题;
+package 基本问题.排序算法.topK问题;
 
 import java.util.PriorityQueue;
 

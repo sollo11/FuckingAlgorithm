@@ -1,6 +1,6 @@
-package Java基础.代理模式.jdk.dao.impl;
+package 基本问题.代理模式.jdk.dao.impl;
 
-import Java基础.代理模式.jdk.dao.UserDao;
+import 基本问题.代理模式.jdk.dao.UserDao;
 
 /**
  * @description：

@@ -1,4 +1,4 @@
-package Java基础.快速幂;
+package 基本问题.快速幂;
 
 /**
  * @description：

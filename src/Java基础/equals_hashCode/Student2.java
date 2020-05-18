@@ -1,4 +1,4 @@
-package Java基础.equals_hashCode;
+package 基本问题.equals_hashCode;
 
 import java.util.HashMap;
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package Java基础.jdk8新特性;
+package 基本问题.jdk8新特性;
 
 import java.util.Comparator;
 import java.util.TreeSet;

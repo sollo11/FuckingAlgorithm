@@ -1,4 +1,4 @@
-package Java基础.代理模式.cglib.callback;
+package 基本问题.代理模式.cglib.callback;
 
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;

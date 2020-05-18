@@ -1,4 +1,4 @@
-package Java基础.辗转相除法求最大公约数;
+package 基本问题.辗转相除法求最大公约数;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package Java基础.多线程;
+package 基本问题.多线程;
 
 import java.util.concurrent.CountDownLatch;
 

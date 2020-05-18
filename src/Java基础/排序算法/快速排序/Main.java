@@ -1,4 +1,4 @@
-package Java基础.排序算法.快速排序;
+package 基本问题.排序算法.快速排序;
 
 import java.util.Arrays;
 

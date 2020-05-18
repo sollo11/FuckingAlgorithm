@@ -1,8 +1,4 @@
-package Java基础;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.RandomAccess;
+package 基本问题;
 
 /**
  * @description： String不可变：https://www.jianshu.com/p/b1d62928552d
