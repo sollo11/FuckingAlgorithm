@@ -1,4 +1,4 @@
-package n个骰子的点数;
+package DP系列.线性DP.骰子问题.n个骰子的点数;
 
 /**
  * @description：

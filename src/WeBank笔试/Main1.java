@@ -33,8 +33,11 @@ public class Main1 {
         long cnt=0;
         for (int i=0;i<n;i++){
             for (int j=0;j<m;j++){
-                if (a[i]+b[j]<=r&&a[i]+b[j]>=l)cnt++;
-                else if (a[i]+b[j]>r) break;
+                if (a[i]+b[j]<=r&&a[i]+b[j]>=l) {
+                    cnt++;
+                } else if (a[i]+b[j]>r) {
+                    break;
+                }
             }
         }
         System.out.println(cnt);

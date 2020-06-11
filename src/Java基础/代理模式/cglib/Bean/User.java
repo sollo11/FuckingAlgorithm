@@ -1,4 +1,4 @@
-package 基本问题.代理模式.cglib.Bean;
+package Java基础.代理模式.cglib.Bean;
 
 /**
  * @description：

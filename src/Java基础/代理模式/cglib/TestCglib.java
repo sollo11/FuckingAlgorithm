@@ -1,7 +1,7 @@
-package 基本问题.代理模式.cglib;
+package Java基础.代理模式.cglib;
 
-import 基本问题.代理模式.cglib.Bean.User;
-import 基本问题.代理模式.cglib.callback.MyCallBackMethod;
+import Java基础.代理模式.cglib.Bean.User;
+import Java基础.代理模式.cglib.callback.MyCallBackMethod;
 import net.sf.cglib.proxy.Callback;
 import net.sf.cglib.proxy.Enhancer;
 

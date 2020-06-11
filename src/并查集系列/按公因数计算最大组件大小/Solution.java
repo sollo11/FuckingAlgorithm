@@ -1,6 +1,5 @@
 package 并查集系列.按公因数计算最大组件大小;
 
-import java.util.Map;
 import java.util.Scanner;
 
 /**

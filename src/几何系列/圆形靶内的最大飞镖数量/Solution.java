@@ -83,9 +83,14 @@ public class Solution {
              * https://zhuanlan.zhihu.com/p/51528623
              */
             //如果距离<=r
-            if (dx * dx + dy * dy <= r * r + eps) { //比较浮点数的关系，需要加上eps
+            //超时
+//            BigDecimal p1 = new BigDecimal(Double.toString(dx * dx + dy * dy));
+//            BigDecimal p2 = new BigDecimal(Double.toString(r * r));
+//            if (p1.subtract(p2).doubleValue() <= eps) { //比较浮点数的关系，需要加上eps
+//                ans++;
+//            }
+            if (dx * dx + dy * dy <= r * r + eps)
                 ans++;
-            }
         }
         return ans;
     }
@@ -93,5 +98,7 @@ public class Solution {
         int[][] points = {{-2,0},{2,0},{0,2},{0,-2}};
         int res = new Solution().numPoints(points, 2);
         System.out.println(res);
+        System.out.println(1.222222222222222222*2.12323232313232323123);
+        System.out.println();
     }
 }

@@ -1,7 +1,7 @@
-package 基本问题.代理模式.jdk;
+package Java基础.代理模式.jdk;
 
-import 基本问题.代理模式.jdk.dao.UserDao;
-import 基本问题.代理模式.jdk.dao.impl.UserDaoImpl;
+import Java基础.代理模式.jdk.dao.UserDao;
+import Java基础.代理模式.jdk.dao.impl.UserDaoImpl;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;

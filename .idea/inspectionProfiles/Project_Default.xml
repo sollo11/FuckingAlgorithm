@@ -36,7 +36,7 @@
       <option name="IGNORE_JAVADOC_PERIOD" value="true" />
       <option name="IGNORE_DUPLICATED_THROWS" value="false" />
       <option name="IGNORE_POINT_TO_ITSELF" value="false" />
-      <option name="myAdditionalJavadocTags" value="Author:,Date:,Description:,Url:,限制:,Level:,level:,createTime:,description：,url：,限制：,author：Jack,createTime：2020/4/13,level：,createTime：2020/3/17,Url：" />
+      <option name="myAdditionalJavadocTags" value="Author:,Date:,Description:,Url:,限制:,Level:,level:,createTime:,description：,url：,限制：,author：Jack,createTime：2020/4/13,level：,createTime：2020/3/17,Url：,date" />
     </inspection_tool>
   </profile>
 </component>

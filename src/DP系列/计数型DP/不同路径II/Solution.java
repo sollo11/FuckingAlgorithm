@@ -1,4 +1,4 @@
-package 不同路径II;
+package DP系列.计数型DP.不同路径II;
 
 import java.util.Scanner;
 
