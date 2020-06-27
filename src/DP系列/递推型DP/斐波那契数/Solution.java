@@ -1,4 +1,5 @@
-package DP系列.递推型DP;import java.util.Scanner;
+package DP系列.递推型DP.斐波那契数;
+import java.util.Scanner;
 /**
  * @Author: Jack
  * @Date: 2020/6/11 10:24
