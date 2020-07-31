@@ -5,7 +5,7 @@ package 零到n减1中缺失的数字;
  * @url： https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/submissions/
  * @限制：1 <= 数组长度 <= 10000
  * @author：Jack
- * @createTime：2020/3/6 18:11
+ * @createTime： 2020/3/6 18:11
  * @level：简单
  */
 public class Solution {
