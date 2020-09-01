@@ -18,6 +18,7 @@ import java.util.HashSet;
  * @createTime: 2020/3/1 19:06
  * @level: 中等
  */
+
 public class Solution {
 
     private ArrayList<String> res;
@@ -29,10 +30,10 @@ public class Solution {
         this.res = new ArrayList<>();
         this.s = s;
         FindChar(0);
-        res=new ArrayList<>(new HashSet<>(res));  //去重
+        res = new ArrayList<>(new HashSet<>(res));  //去重
         return res.toArray(new String[res.size()]);
     }
-
+    
     //寻找place位置要确定的字符
     private void FindChar(int place) {
         if (place == s.length() - 1) {
