@@ -1,4 +1,4 @@
-package 基本问题.判断链表是否有环;
+package Java基础.判断链表是否有环;
 
 /**
  * @description：
