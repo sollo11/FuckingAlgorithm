@@ -13,7 +13,6 @@ public class S2 {
             }
             index++;
         }
-
         if (index == len) {
             return 0;
         }
