@@ -1,4 +1,4 @@
-package 基本问题.jdk8新特性;
+package Java基础.jdk8新特性;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +57,7 @@ public class StreamAPI_Test2 {
         boolean b1=users.stream().allMatch(e->e.getAge()>30);  //是否都大于30岁的元素
         boolean b2=users.stream().anyMatch(e->e.getAge()>30);  //是否有至少一个大于30岁的元素
 
-        Optional<User> max_age_user=users.stream().max((x,y)->x.getAge()-y.getAge());  //比较User大小，自定义为比较年龄，所以返回最大年龄的元素
+        Optional<User> max_age_user=users.stream().max((x, y)->x.getAge()-y.getAge());  //比较User大小，自定义为比较年龄，所以返回最大年龄的元素
         System.out.println(max_age_user.get());
 
     }

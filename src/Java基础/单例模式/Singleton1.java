@@ -1,4 +1,4 @@
-package 基本问题.单例模式;
+package Java基础.单例模式;
 
 /**
  * @description： 双重检验锁，懒汉：做什么都要找理由 （ 即使运行创建对象，也要考虑多线程、安全，对象重复等问题）。
@@ -12,7 +12,6 @@ package 基本问题.单例模式;
 public class Singleton1 {
     /**
      * uniqueInstance 采用 volatile 关键字修饰也是很有必要的， uniqueInstance = new Singleton(); 这段代码其实是分为三步执行：
-     *
      * 为 uniqueInstance 分配内存空间
      * 初始化 uniqueInstance
      * 将 uniqueInstance 指向分配的内存地址
@@ -21,7 +20,7 @@ public class Singleton1 {
      * 后发现 uniqueInstance 不为空，因此返回 uniqueInstance，但此时 uniqueInstance 还未被初始化。
      *
      * 对象初始化的例子如：List<String> list;
-     * list=new ArrayList<String>();//这样就将其初始化了。然后你可以调用它的方法如：list.add("dsafs");//正确的调用方法。
+     * list=new ArrayList<String>(); //这样就将其初始化了。然后你可以调用它的方法如：list.add("dsafs");//正确的调用方法。
      * 如果没有上述的初始化，list.add("dsafs")；//运行这句话时将要产生NullPointerException（空指针）异常。
      * 基本类型数据用着全局变量，声明后如果不初始化的话，
      * java虚拟机将自动对其初始化,比如你在类的成员变量中声明:int age;
@@ -41,7 +40,7 @@ public class Singleton1 {
         //先判断对象是否已经实例过，没有实例化过才进入加锁代码
         /**
          * 因为一旦singleton1被正确初始化以后，每次访问null == singleton1一定能够得到false从而不会重新初始化。
-         * 但是我们无需每次都通过上锁来判断null == singleton1。
+         * 但是我们无需每次都先通过上锁再来判断null == singleton1。
          * 所以双重锁的目的是为了成功初始化singleton1之后不再触发加锁操作。
          */
         if(singleton1==null){

@@ -1,4 +1,4 @@
-package 基本问题.排序算法.冒泡排序;
+package Java基础.排序算法.冒泡排序;
 
 import java.util.Arrays;
 
@@ -36,7 +36,7 @@ public class Main {
     public static void bubbleSort(int[] a){
         int len=a.length;
         int temp;
-        for(int i=0;i<len-1;i++) { //一趟排序的编号
+        for(int i=0;i<len-1;i++) { //一趟排序的编号，总共需要len-1趟，可以想象只有2个元素的样子，只需要1趟
             for (int j = 0; j < len - 1 - i; j++) {  //该趟排序的需要与下一个元素进行比较的下标范围
                 if(a[j]>a[j+1]){
                     temp=a[j];

@@ -1,4 +1,4 @@
-package 基本问题.排序算法.归并排序;
+package Java基础.排序算法.归并排序;
 
 import java.util.Arrays;
 
@@ -48,7 +48,7 @@ public class Main {
             tmp[t++]=arr[j++];
         }
         t=0;
-//        for (int m=0;m<arr.length;m++)
+//        for (int m=0;m<arr.length; m++)
 //            System.out.print(arr[m]+" ");
 //        System.out.println();
         //最后，将tmp数组复制给arr数组

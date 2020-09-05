@@ -1,4 +1,4 @@
-package 基本问题.排序算法.简单选择排序;
+package Java基础.排序算法.简单选择排序;
 
 /**
  * @description：常用于取序列中最大最小的几个数时
@@ -29,7 +29,27 @@ public class Main {
             a[pos]=a[i];
             a[i]=min;
         }
+        // testPractice(a);
         for (int i=0;i<len;i++)
             System.out.print(a[i]+" ");
     }
+
+    private static void testPractice(int[] a) {
+
+        for(int i = 0; i < a.length; i++) {
+            int min = a[i];
+            int pos = i;
+            for (int j = i + 1; j < a.length; j++) {
+                if (min > a[j]) {
+                    min = a[j];pos = j;
+                }
+            }
+            if (pos != i) {
+                a[pos] = a[i];
+                a[i] = min;
+            }
+        }
+        for (int i : a) System.out.print(i+" ");
+    }
+
 }

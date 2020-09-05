@@ -1,4 +1,4 @@
-package 基本问题.jdk8新特性;
+package Java基础.jdk8新特性;
 
 import java.util.Comparator;
 import java.util.TreeSet;
@@ -9,7 +9,7 @@ import java.util.TreeSet;
  * @url：
  * @限制：
  * @author：Jack
- * @createTime：2020/3/27 14:23
+ * @createTime： 2020/3/27 14:23
  * @level：
  */
 public class LambdaTest {
@@ -20,6 +20,7 @@ public class LambdaTest {
                 System.out.println("run1...");
             }
         };
+
         new Thread(runnable).start();
         //等效于上面的写法()里面写参数，->{}里面写函数内容
         Runnable runnable2=()->{System.out.println("run2...");};

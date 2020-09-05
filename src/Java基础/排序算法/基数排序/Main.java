@@ -1,4 +1,4 @@
-package 基本问题.排序算法.基数排序;
+package Java基础.排序算法.基数排序;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,13 +21,16 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        int arr[]={324,1234,45,87,4};
-        Basesort(arr,arr.length);
+        int arr[] = {324, 1234, 45, 87, 4};
+        Basesort(arr, arr.length);
     }
+
     /**
      * 筛选出最大元素确定位数,从而确定需要分配收集的趟数
+     *
      * @param array
      * @param n
+     *
      * @return
      */
     public static int getTime(int array[], int n) {

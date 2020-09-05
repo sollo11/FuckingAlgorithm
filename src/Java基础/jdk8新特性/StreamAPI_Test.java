@@ -1,4 +1,4 @@
-package 基本问题.jdk8新特性;
+package Java基础.jdk8新特性;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,7 @@ import java.util.List;
  * @level：
  */
 public class StreamAPI_Test {
+
     public static void main(String[] args) {
         List<String> list=new ArrayList<>();
         list.add("a");

@@ -1,7 +1,5 @@
 package 丑数;
 
-import java.util.ArrayList;
-
 /**
  * @description：动态规划求解:
  * 丑数的排列肯定是1,2,3,4,5,6,8,10.... 然后有一个特点是，任意一个丑数都是由小于它的某一个丑数*2，*3或者*5得到的
@@ -28,8 +26,8 @@ import java.util.ArrayList;
  * @限制：
  * 1 是丑数。
  * n 不超过1690。
- * @author：Jack
- * @createTime：2020/3/5 9:02
+ * @author： Jack
+ * @createTime： 2020/3/5 9:02
  * @level： 中等
  */
 public class Solution {

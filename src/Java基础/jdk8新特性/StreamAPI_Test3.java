@@ -1,4 +1,4 @@
-package 基本问题.jdk8新特性;
+package Java基础.jdk8新特性;
 
 import java.util.ArrayList;
 import java.util.List;

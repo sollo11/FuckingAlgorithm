@@ -25,11 +25,13 @@ import java.util.*;
  * @url： https://leetcode-cn.com/problems/n-queens/
  * 回溯思想详解：https://leetcode-cn.com/problems/n-queens/solution/hui-su-suan-fa-xiang-jie-by-labuladong/
  * @限制：
- * @author：Jack
- * @createTime：2020/4/9 23:17
+ * @autho: Jack
+ * @createTime: 2020/4/9 23:17
  * @level：
  */
 public class Solution {
+
+
     //根据已经被标记为Q的位置的特征进行记录
     private  Set<Integer> colSet = new HashSet<>();
     private  Set<Integer> subSet = new HashSet<>();

@@ -1,6 +1,4 @@
-package 基本问题.并发原子类练习;
-
-import java.util.concurrent.atomic.AtomicStampedReference;
+package Java基础.并发原子类练习;
 
 /**
  * @description：AtomicStampedReference解决ABA问题，

@@ -8,35 +8,38 @@ import org.junit.Test;
  * @url：
  * @限制：
  * @author：Jack
- * @createTime：2020/4/10 14:39
+ * @createTime： 2020/4/10 14:39
  * @level：
  */
 public class Solution {
 
-    private int num=32;
+    private int num = 32;
 
-    private int a=2;
-    private int b=5;
+    private int a = 2;
+    private int b = 5;
+
     /**
      * 计算数字的二进制位的1的个数
      */
     @Test
-    public void cal_One(){
+    public void cal_One() {
 
-        int sum=0;
-        while (num!=0){
-            num=num&(num-1);
+        int sum = 0;
+        while (num != 0) {
+            num = num & (num - 1);
             sum++;
         }
         System.out.println(sum);
     }
+
     /**
      * 判断一个数是否是2^n
      * 如果是，那么它的二进制位只有一位
+     *
      * @param
      */
     @Test
-    public void is_pow(){
+    public void is_pow() {
 //        int sum=0;
 ////        while (num!=0){
 ////            num=num&(num-1);
@@ -47,8 +50,8 @@ public class Solution {
 ////            System.out.println("Yes");
 ////        else System.out.println("No");
         //或者
-        num=num&(num-1);
-        if(num==0)
+        num = num & (num - 1);
+        if (num == 0)
             System.out.println("Yes");
         else System.out.println("No");
     }
@@ -71,15 +74,14 @@ public class Solution {
      */
     @Test
     public void is_4pow() {
-        int n=2;
-        int tmp=n&(n-1);
-        if(tmp==0){
-            int tmp2=0x55555555&n;
-            if(tmp2!=0)
+        int n = 2;
+        int tmp = n & (n - 1);
+        if (tmp == 0) {
+            int tmp2 = 0x55555555 & n;
+            if (tmp2 != 0)
                 System.out.println("Yes");
             else System.out.println("No");
-        }
-        else System.out.println("No");
+        } else System.out.println("No");
     }
 
     /**
@@ -87,10 +89,10 @@ public class Solution {
      * 3的幂的特点：如果一个整数N是3的幂，那么其所有约数都是3的幂。那么，换一个角度，如果n小于N且是N的约数，那么其一定是3的幂；
      */
     @Test
-    public void is_3pow(){
-        int n=27;
+    public void is_3pow() {
+        int n = 27;
         int max = (int) Math.pow(3, (int) (Math.log(0x7fffffff) / Math.log(3)));
-        if(max%n==0)
+        if (max % n == 0)
             System.out.println("Yes");
         else System.out.println("No");
     }
@@ -99,12 +101,11 @@ public class Solution {
      * 第一个位为1的数，一定是奇数
      */
     @Test
-    public void isOddNum(){
-        int num=89;
-        if((num&1)==0){
+    public void isOddNum() {
+        int num = 89;
+        if ((num & 1) == 0) {
             System.out.println("偶数");
-        }
-        else System.out.println("奇数");
+        } else System.out.println("奇数");
     }
 
     /**
@@ -116,14 +117,14 @@ public class Solution {
      * 　a = a^b； 　　//a=00000110
      */
     @Test
-    public void swap(){
-        System.out.print("a="+a+",");
-        System.out.println("b="+b);
-        a=a^b;
-        b=b^a;
-        a=a^b;
-        System.out.print("a="+a+",");
-        System.out.println("b="+b);
+    public void swap() {
+        System.out.print("a=" + a + ",");
+        System.out.println("b=" + b);
+        a = a ^ b;
+        b = b ^ a;
+        a = a ^ b;
+        System.out.print("a=" + a + ",");
+        System.out.println("b=" + b);
     }
 
     /**
@@ -132,21 +133,22 @@ public class Solution {
      * 10100001^00000110 = 10100111
      */
     @Test
-    public void change(){
-        int place1=2;
-        int place2=3;
-        int num=18;
-        int tmp_num=(int) Math.pow(2,place1-1)+(int) Math.pow(2,place2-1);
-        System.out.println(num&tmp_num);
+    public void change() {
+        int place1 = 2;
+        int place2 = 3;
+        int num = 18;
+        int tmp_num = (int) Math.pow(2, place1 - 1) + (int) Math.pow(2, place2 - 1);
+        System.out.println(num & tmp_num);
     }
+
     /**
      * 判断两个数是否相同
      * 应用：找出数组中唯一一个不重复的数字
      */
     @Test
-    public void isSame(){
-        int n=a^b;
-        if(n==0)
+    public void isSame() {
+        int n = a ^ b;
+        if (n == 0)
             System.out.println("Same");
         else System.out.println("Different");
     }
@@ -159,9 +161,9 @@ public class Solution {
      * a>>n=a/(2^n)
      */
     @Test
-    public void pow(){
-        System.out.println(2<<4);
-        System.out.println(16>>2);
+    public void pow() {
+        System.out.println(2 << 4);
+        System.out.println(16 >> 2);
     }
 
     /**
@@ -169,27 +171,26 @@ public class Solution {
      * 假设
      *  1011
      * +1101，对应位都是1的会产生进位1，（想到了&的性质）进位给下一位计算
-     *  那么我们求&一下：
+     * 那么我们求&一下：
      *  1011
      * &1101
      * =1001
      * 然后该数左移1位，（进位要给下一位计算）
      * 得到10010的一轮进位
-     * 1011
-     *+1101，不加上进位的情况，得到0110，（想到^的性质，只有1和0才能产生1）
-     *然后加上进位：
+     *  1011
+     * +1101，不加上进位的情况，得到0110，（想到^的性质，只有1和0才能产生1）
+     * 然后加上进位：
      *  0110
-     *+10010，问题转化为求0110(a)和进位（b）的和，继续循环，直到进位为0，a就是结果
+     * +10010，问题转化为求0110(a)和进位（b）的和，继续循环，直到进位为0，a就是结果
      */
-
     @Test
-    public void add(){
-        int a=20;
-        int b=89;
-        while (b!=0){
-            int tmp=a;
-            a=a^b; //不加进位的相加
-            b=(tmp&b)<<1; //进位,已经移到相应被加的位置
+    public void add() {
+        int a = 20;
+        int b = 89;
+        while (b != 0) {
+            int tmp = a;
+            a = a ^ b; //不加进位的相加
+            b = (tmp & b) << 1; //进位,已经移到相应被加的位置
         }
         System.out.println(a);
     }
@@ -202,9 +203,9 @@ public class Solution {
      * 0000 1011(二进制) –取反-> 0000 0100(二进制) –加1-> 1111 0101(二进制)
      */
     @Test
-    public void SignReversal(){
-        int num=-12;
-        System.out.println(~num+1);
+    public void SignReversal() {
+        int num = - 12;
+        System.out.println(~ num + 1);
     }
 
     /**
@@ -212,15 +213,14 @@ public class Solution {
      * 移位来取符号位判断正负
      */
     @Test
-    public void abs(){
-        int a=12;
+    public void abs() {
+        int a = 12;
         int i = a >> 31;
-        int res= i == 0 ? a : (~a + 1);
+        int res = i == 0 ? a : (~ a + 1);
         System.out.println(res);
     }
 
     /**
-     *
      * HashMap寻找一个<=容量的最大值，该最大值为2的幂次
      * 采用多轮的 右移再和本身进行或运算
      * 每一轮保证了数的二进制的低位均是1

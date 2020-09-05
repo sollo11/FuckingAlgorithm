@@ -1,4 +1,4 @@
-package 基本问题.排序算法.直接插入排序;
+package Java基础.排序算法.直接插入排序;
 
 /**
  * @description： 将把新的数据插入到已经排好的数据列中
@@ -16,6 +16,7 @@ public class Main {
     public static void main(String[] args) {
         int a[]=new int[]{22,11,11,66,33,55,44};
         int len=a.length;
+        testPractice(a);
         int next=1;  //下一个要加入排好序组合的元素下标
         int before_last_next;   //前面已经排好序的最后一个元素下标
         for (;next<len;next++){
@@ -32,4 +33,18 @@ public class Main {
             System.out.print(a[i]+" ");
     }
 
+    private static void testPractice(int[] a) {
+
+        for (int i = 1; i < a.length; i++) {
+            int pos = i - 1;
+            int insert = a[i];
+            while(pos >= 0 && a[pos] >= insert) {
+                a[pos + 1] = a[pos];
+                pos--;
+            }
+            a[pos + 1] = insert;
+        }
+        for (int i=0; i<a.length;i++)
+            System.out.print(a[i]+" ");
+    }
 }

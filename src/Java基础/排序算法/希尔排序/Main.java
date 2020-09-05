@@ -1,4 +1,4 @@
-package 基本问题.排序算法.希尔排序;
+package Java基础.排序算法.希尔排序;
 
 /**
  * @description：

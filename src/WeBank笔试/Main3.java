@@ -13,7 +13,9 @@ import java.util.Scanner;
 public class Main3 {
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
+
         while (true) {
             int n, m, x;
             n = scanner.nextInt(); //n
@@ -24,12 +26,13 @@ public class Main3 {
             } else {
                 int tmp = m / n;
                 int left = m % n;
-                System.out.println("left="+left);
+                System.out.println("left=" + left);
                 if (left == 0) {
                     System.out.println(tmp + 1);
                 } else {
-                    if (left <=3) {
-                        System.out.println(tmp+1);continue;
+                    if (left <= 3) {
+                        System.out.println(tmp + 1);
+                        continue;
                     }
                     int tmp1 = left / 3;
                     int r = left % 3 == 0 ? tmp1 : tmp1 + 1;

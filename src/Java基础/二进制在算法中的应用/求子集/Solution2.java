@@ -1,8 +1,7 @@
-package 基本问题.二进制在算法中的应用.求子集;
+package Java基础.二进制在算法中的应用.求子集;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 /**

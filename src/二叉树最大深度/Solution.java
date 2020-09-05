@@ -6,10 +6,10 @@ import java.util.Queue;
 
 /**
  * @description：
- * @url：https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/
+ * @url： https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/
  * @限制：
  * @author：Jack
- * @createTime：2020/4/1 9:33
+ * @createTime： 2020/4/1 9:33
  * @level：
  */
 class TreeNode {
@@ -44,9 +44,9 @@ public class Solution {
         while (!queue.isEmpty()){
             int size=queue.size();
             depth++;
-            //遍历size个节点的下一层的左右节点（不存在递归，这样就可以遍历所有的左右子树节点），
+            // 遍历size个节点的下一层的左右节点（不存在递归，这样就可以遍历所有的左右子树节点），
             // 遍历完进入下一次循环，depth+1;
-            while(size--!=0){
+            while (size-- != 0) {
                 TreeNode first=queue.poll();
                 if(first.left!=null){
                     queue.offer(first.left);

@@ -1,4 +1,4 @@
-package 基本问题.单例模式;
+package Java基础.单例模式;
 
 /**
  * @description： 饱汉模式：不是线程安全的，因为是在需要的时候才会产生实例对象，
@@ -11,7 +11,7 @@ package 基本问题.单例模式;
  * @url：
  * @限制：
  * @author：Jack
- * @createTime：2020/3/14 12:08
+ * @createTime:  2020/3/14 12:08
  * @level：
  */
 public class Singleton2 {
