@@ -7,8 +7,7 @@ import java.util.Scanner;
 /**
  * @Author: Jack
  * @Date: 2020/4/20 13:25
- * @Description:
- * [h,w]
+ * @Description: [h, w]
  * 假如排序后数组为:
  * [2,5]
  * [5,4]
@@ -28,41 +27,42 @@ import java.util.Scanner;
  * @Url: https://leetcode-cn.com/problems/russian-doll-envelopes/
  * 思路来源：https://leetcode-cn.com/problems/russian-doll-envelopes/solution/zui-chang-di-zeng-zi-xu-lie-kuo-zhan-dao-er-wei-er/
  * 贪心+二分优化:https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/dong-tai-gui-hua-er-fen-cha-zhao-tan-xin-suan-fa-p/
- *  @限制:
+ * @限制:
  * @Level:
  */
 public class Solution {
 
     public int maxEnvelopes(int[][] envelopes) {
-        if (envelopes.length==0||envelopes==null)
+        if (envelopes.length == 0)
             return 0;
         Arrays.sort(envelopes, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {
-                if (o1[0]!=o2[0])
-                    return o1[0]-o2[0];
-                else return o2[1]-o1[1]; //在w相同时，对h按照降序排列
+                if (o1[0] != o2[0])
+                    return o1[0] - o2[0];
+                else return o2[1] - o1[1]; //在w相同时，对h按照降序排列
             }
         });
 
-        int res=1;
-        int len=envelopes.length;
-        int[] dp=new int[len];  //dp[i]表示w[0]到w[i]的最大上升子序列的长度
-        Arrays.fill(dp,1);
-        for (int i=0;i<envelopes.length;i++){
-            for (int j=0;j<i;j++){ //envelopes[i]的前面的所有序列
-                if (envelopes[j][1]<envelopes[i][1]){  //w[j]到w[i]是升序的，
-                    dp[i]=Math.max(dp[j]+1,dp[i]); //dp[j]+1表示w[0]到[j]最大上升子序列长度加上一个w[i]的长度
+        int res = 1;
+        int len = envelopes.length;
+        int[] dp = new int[len];  //dp[i]表示w[0]到w[i]的最大上升子序列的长度
+        Arrays.fill(dp, 1);
+        for (int i = 0; i < envelopes.length; i++) {
+            for (int j = 0; j < i; j++) { //envelopes[i]的前面的所有序列
+                if (envelopes[j][1] < envelopes[i][1]) {  //w[j]到w[i]是升序的，
+                    dp[i] = Math.max(dp[j] + 1, dp[i]); //dp[j]+1表示w[0]到[j]最大上升子序列长度加上一个w[i]的长度
                 }
             }
-            res=Math.max(res,dp[i]);
+            res = Math.max(res, dp[i]);
         }
         return res;
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int[][] en={{4,5},{4,6},{6,7},{2,3},{1,1}};
-        int res=new Solution().maxEnvelopes(en);
+        int[][] en = {{4, 5}, {4, 6}, {6, 7}, {2, 3}, {1, 1}};
+        int res = new Solution().maxEnvelopes(en);
         System.out.println(res);
     }
 }
